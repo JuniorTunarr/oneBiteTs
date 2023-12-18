@@ -50,3 +50,6 @@ type Ex4 = Extract<number | string, string>; // string
 //# Answer 3
 
 type InferArrayType<T> = T extends Array<infer K> ? K : never;
+
+type Ex5 = InferArrayType<number[]>; // number
+type Ex6 = InferArrayType<string[]>; // string
